@@ -34,20 +34,27 @@ const displayVidoes = (videos) => {
     console.log(element);
     const videoCard = document.createElement("div");
     videoCard.innerHTML = `
-	<div class="card bg-base-100 shadow-sm">
-  <figure>
-    <img
-      src="${element.thumbnail}"
-      alt="Shoes" />
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">${element.title}</h2>
-    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
+	<div class="card bg-base-100">
+			<figure class="relative">
+				<img class="w-full h-[250px] object-cover" src="${element.thumbnail}" alt="video thumbnail" />
+				<span class="absolute bottom-2 right-2 text-white bg-black px-2 rounded">3hrs 56 min ago</span>
+			</figure>
+			<div class="flex gap-3 px-0 py-5">
+				<div class="profile">
+					<div class="avatar">
+						<div class="ring-primary ring-offset-base-100 w-12 rounded-full ring ring-offset-2">
+							<img src="${element.authors[0].profile_picture}" />
+						</div>
+					</div>
+				</div>
+				<div class="intro">
+					<h2 class="text-xl font-bold">${element.title}</h2>
+					<p class="text-gray-400 flex items-center gap-4">${element.authors[0].profile_name} <img class="w-6"
+							src="https://img.icons8.com/?size=48&id=98A4yZTt9abw&format=png" alt=""></p>
+					<p class="text-gray-400">${element.others.views}</p>
+				</div>
+			</div>
+		</div>
 	`;
     videoContainer.appendChild(videoCard);
   });
