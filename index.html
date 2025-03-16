@@ -12,19 +12,25 @@
 <body>
 
 	<header>
-		<nav class="w-11/12 mx-auto flex justify-between p-4 border-b-1">
+		<nav class="w-11/12 mx-auto flex justify-between p-4 border-b-1 border-[#17171720]">
 			<div>
 				<img src="./asset/Logo.png" alt="">
 			</div>
 			<div>
-				<button class="btn">Sort By View</button>
+				<button class="btn bg-[#b9b9b9]">Sort By View</button>
 			</div>
 			<div>
-				<button class="btn">Blog</button>
+				<button class="btn bg-[#FF1F3D] text-white">Blog</button>
 			</div>
 		</nav>
 	</header>
+	<section id="category-container" class="flex justify-center gap-5 py-5">
+		<button class="btn btn-sm  bg-[#FF1F3D] text-white">All</button>
+	</section>
 
+	<section id="video-container" class="w-11/12 mx-auto grid grid-cols-4 gap-4"></section>
+
+	<script src="./script/index.js"></script>
 </body>
 
 </html>
